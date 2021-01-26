@@ -11,10 +11,10 @@ init()
 time.sleep(1)
 
 # Extracting method
-def extr(archive, input, name):
+def extr(name, archive, input):
 	zf = ZipFile('archive/' + archive + '.zip', 'r')
 	zf.extractall(input)
-	zf.close()	
+	zf.close()
 
 # Logging out
 def logout():
@@ -24,7 +24,7 @@ def logout():
 # Extracting java
 print(Fore.GREEN + 'WARNING: Java not found or broken.' + Fore.WHITE)
 try:
-	extr('java', 'bin/java', 'java')
+	extr('java', 'java', 'bin/java')
 	print('[Extracting java]: done')
 except Exception as e:
 	print(Fore.WHITE + '[Extracting java]: ' + str(e))
@@ -33,8 +33,8 @@ except Exception as e:
 # Extracting libraries
 print(Fore.GREEN + '\nWARNING: Libraries not found or broken.' + Fore.WHITE)
 try:
-	extr('libraries', 'bin/libraries', 'libraries')
-	print('[Extracting libraries]: done')
+	extr('libraries', 'libraries', 'bin/libraries')
+	print('[Extracting game]: done')
 except Exception as e:
 	print(Fore.WHITE + '[Extracting libraries]: ' + str(e))
 	logout()
@@ -42,7 +42,7 @@ except Exception as e:
 # Extracting natives
 print(Fore.GREEN + '\nWARNING: Natives not found or broken.' + Fore.WHITE)
 try:
-	extr('natives', 'bin/natives', 'natives')
+	extr('natives', 'natives', 'bin/natives')
 	print('[Extracting natives]: done')
 except Exception as e:
 	print(Fore.WHITE + '[Extracting natives]: ' + str(e))
@@ -51,7 +51,7 @@ except Exception as e:
 # Extracting assets
 print(Fore.GREEN + '\nWARNING: Assets not found or broken.' + Fore.WHITE)
 try:
-	extr('assets', 'game', 'assets')
+	extr('assets', 'assets', 'game')
 	print('[Extracting game]: done')
 except Exception as e:
 	print(Fore.WHITE + '[Extracting assets]: ' + str(e))
