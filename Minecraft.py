@@ -34,7 +34,7 @@ except Exception as e:
 print(Fore.GREEN + '\nWARNING: Libraries not found or broken.' + Fore.WHITE)
 try:
 	extr('libraries', 'bin/libraries', 'libraries')
-	print('[Extracting game]: done')
+	print('[Extracting libraries]: done')
 except Exception as e:
 	print(Fore.WHITE + '[Extracting libraries]: ' + str(e))
 	logout()
